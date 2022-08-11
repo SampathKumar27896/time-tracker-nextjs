@@ -2,14 +2,17 @@ import React from "react";
 import { Layout } from "antd";
 import Sidebar from "../sidebar";
 import AppHeader from "../header";
-import AppContent from "../content";
+import AppContent from "../contents/appContent";
+import SidebarMenu from "../sidebarMenu";
 
 const AppLayout = ({ children }) => {
   return (
     <Layout>
       <AppHeader />
       <Layout>
-        <Sidebar />
+        <Sidebar width={200}>
+          <SidebarMenu />
+        </Sidebar>
         <Layout>
           <AppContent>{children}</AppContent>
         </Layout>
