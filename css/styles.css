@@ -1,7 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700&family=Space+Mono&display=swap');
 @import '~antd/dist/antd.css';
-
 body {
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 300;
@@ -19,6 +16,7 @@ body {
     padding:0.5rem;
     background-color: #ffffff;
     min-height: 100vh;
+   
 }
 .auth-content {
     margin:0rem 0.5rem 0rem 0.5rem;
@@ -33,3 +31,47 @@ body {
     min-height: 100vh;
 }
 /* sidebar */
+
+
+.site-page-header {
+    border: 1px solid rgb(230, 230, 230);
+}
+  .row {
+    /* background-color: rgba(184, 154, 218, 0.24); */
+    /* border: 1px solid rgb(230, 230, 230); */
+  }
+  
+  .split-view-left {
+    color: white;
+    height: 85%;
+    padding: 1px;
+  }
+  .split-view-right {
+    color: white;
+    height: 85%;
+    padding: 1px;
+  }
+  .internal-page-header {
+    height: 15%;
+  }
+  
+  .selected-card {
+    height: 85vh;
+    width: 500px;
+    margin: 5px;
+    overflow: auto;
+  }
+  .ant-list-item-meta-description {
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* background-color: green; */
+  }
+  .ant-list-split .ant-list-item {
+    border: 1px solid #f0f0f0;
+    margin: 5px;
+    padding: 5px;
+    
+  }
+  

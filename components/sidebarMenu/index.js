@@ -4,7 +4,7 @@ const SidebarMenu = () => {
   return (
     <Menu defaultSelectedKeys={["1"]} mode="inline">
       <Menu.Item key="1">
-        <Link href="/tasks">Tasks</Link>
+        <Link href="/">Tasks</Link>
       </Menu.Item>
       <Menu.Item key="2">
         <Link href="/projects">Project</Link>
