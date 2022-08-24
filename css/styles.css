@@ -1,7 +1,9 @@
+
 @import '~antd/dist/antd.css';
+
 body {
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-weight: 300;
+    font-family: Inter,  sans-serif;
+    font-weight: 500;
     font-size: 1rem;
 }
 /* app header */
@@ -56,7 +58,8 @@ body {
   }
   
   .selected-card {
-    height: 85vh;
+    height: auto;
+    max-height: 85vh;
     width: 500px;
     margin: 5px;
     overflow: auto;
@@ -74,4 +77,8 @@ body {
     padding: 5px;
     
   }
-  
+    .ant-list-item-meta-title {
+        font-weight: 600;
+        color:rgb(97, 97, 97);
+        
+    }

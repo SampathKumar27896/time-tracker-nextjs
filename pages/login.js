@@ -10,7 +10,7 @@ const Login = ({callBackendAPI}) => {
     
     const result = await callBackendAPI({...LOGIN_API, requestBody:{...values}});
     if(result.status)
-        router.push('/projects')
+        router.push('/project')
   };
 
   const onFinishFailed = (errorInfo) => {

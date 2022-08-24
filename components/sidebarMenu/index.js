@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Menu } from 'antd';
+import { Menu } from "antd";
 const SidebarMenu = () => {
   return (
     <Menu defaultSelectedKeys={["1"]} mode="inline">
@@ -7,7 +7,7 @@ const SidebarMenu = () => {
         <Link href="/">Tasks</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link href="/projects">Project</Link>
+        <Link href="/project/">Project</Link>
       </Menu.Item>
       <Menu.Item key="3">
         <Link href="/login">Login</Link>
