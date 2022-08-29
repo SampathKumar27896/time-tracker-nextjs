@@ -52,6 +52,7 @@ body {
     color: white;
     height: 85%;
     padding: 1px;
+    width: 100%;
   }
   .internal-page-header {
     height: 15%;
@@ -60,7 +61,7 @@ body {
   .selected-card {
     height: auto;
     max-height: 85vh;
-    width: 500px;
+    width: 100%;
     margin: 5px;
     overflow: auto;
   }

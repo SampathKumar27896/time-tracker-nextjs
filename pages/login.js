@@ -1,29 +1,30 @@
 import AuthLayout from "../components/layouts/authLayout";
-import { Form, Input, Button, Space,Typography  } from "antd";
-import {LOGIN_API } from '../helpers/constants';
-import { useRouter } from 'next/router'
+import { Form, Input, Button, Space, Typography } from "antd";
+import { LOGIN_API } from "../helpers/constants";
+import { useRouter } from "next/router";
 const { Title } = Typography;
-import Link from 'next/link'
-const Login = ({callBackendAPI}) => {
-  const router = useRouter()
-  const onFinish = async(values) => {
-    
-    const result = await callBackendAPI({...LOGIN_API, requestBody:{...values}});
-    if(result.status)
-        router.push('/project')
+import Link from "next/link";
+const Login = ({ callBackendAPI }) => {
+  const router = useRouter();
+  const onFinish = async (values) => {
+    const result = await callBackendAPI({
+      ...LOGIN_API,
+      requestBody: { ...values },
+    });
+    if (result.status) router.push("/");
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
   return (
-      <Form
+    <Form
       name="basic"
       labelCol={{
         span: 8,
       }}
       wrapperCol={{
-        span: 8
+        span: 8,
       }}
       initialValues={{
         remember: true,
@@ -32,20 +33,19 @@ const Login = ({callBackendAPI}) => {
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
-       <Form.Item
+      <Form.Item
         wrapperCol={{
-          offset: 8
+          offset: 8,
         }}
       >
-
         <Title>Login</Title>
       </Form.Item>
       <Form.Item
-        name='emailId'
+        name="emailId"
         label="Email"
         rules={[
           {
-            type: 'email',
+            type: "email",
           },
         ]}
       >
@@ -66,29 +66,24 @@ const Login = ({callBackendAPI}) => {
       </Form.Item>
       <Form.Item
         wrapperCol={{
-          offset: 8
+          offset: 8,
         }}
       >
-      
         <Link href="/register">or Register here!.</Link>
-     
-        </Form.Item>
+      </Form.Item>
       <Form.Item
         wrapperCol={{
-          offset: 8
+          offset: 8,
         }}
       >
-        <Space size='large'>
-            <Button type="primary" htmlType="submit">
+        <Space size="large">
+          <Button type="primary" htmlType="submit">
             Submit
-            </Button>
-            <Button htmlType="button">
-            Clear
           </Button>
+          <Button htmlType="button">Clear</Button>
         </Space>
       </Form.Item>
     </Form>
-    
   );
 };
 Login.getLayout = function getLayout(page) {

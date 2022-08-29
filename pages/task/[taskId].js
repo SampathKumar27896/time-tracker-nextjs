@@ -58,7 +58,7 @@ const EditTask = ({ task, projects, callBackendAPI }) => {
         </Col>
       </Row>
       <Row>
-        <Col span={24}>
+        <Col span={24} style={{ paddingTop: "5%" }}>
           <Form
             name="basic"
             labelCol={{
@@ -110,7 +110,7 @@ const EditTask = ({ task, projects, callBackendAPI }) => {
                 span: 8,
               }}
             >
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" htmlType="submit" block={true}>
                 Update
               </Button>
             </Form.Item>

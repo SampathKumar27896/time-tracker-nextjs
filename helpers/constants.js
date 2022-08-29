@@ -33,4 +33,8 @@ module.exports = {
     url: `${API_VERSION}/other/task/getTasks`,
     method: `GET`,
   },
+  UPSERT_TASK_PROGRESS: {
+    url: `${API_VERSION}/other/task/upsertTaskProgress`,
+    method: `POST`,
+  },
 };

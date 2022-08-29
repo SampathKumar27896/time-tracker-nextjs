@@ -10,7 +10,7 @@ const AppLayout = ({ children }) => {
     <Layout>
       <AppHeader />
       <Layout>
-        <Sidebar width={200}>
+        <Sidebar width={100}>
           <SidebarMenu />
         </Sidebar>
         <Layout>
