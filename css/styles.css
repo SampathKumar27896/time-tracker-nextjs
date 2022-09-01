@@ -1,0 +1,85 @@
+
+@import '~antd/dist/antd.css';
+
+body {
+    font-family: Inter,  sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+/* app header */
+.ant-layout-header {
+    padding: 0rem 1rem 0rem 1rem;
+    background-color: #ffffff;
+}
+/* app header */
+/* app content  */
+.app-content {
+    margin:0.5rem 0.5rem 0.5rem 0.5rem;
+    padding:0.5rem;
+    background-color: #ffffff;
+    min-height: 100vh;
+   
+}
+.auth-content {
+    margin:0rem 0.5rem 0rem 0.5rem;
+    padding:10% 0rem 0% 0rem;
+    background-color: #ffffff;
+}
+/* app content  */
+
+/* sidebar */
+.ant-layout-sider {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+/* sidebar */
+
+
+.site-page-header {
+    border: 1px solid rgb(230, 230, 230);
+}
+  .row {
+    /* background-color: rgba(184, 154, 218, 0.24); */
+    /* border: 1px solid rgb(230, 230, 230); */
+  }
+  
+  .split-view-left {
+    color: white;
+    height: 85%;
+    padding: 1px;
+  }
+  .split-view-right {
+    color: white;
+    height: 85%;
+    padding: 1px;
+    width: 100%;
+  }
+  .internal-page-header {
+    height: 15%;
+  }
+  
+  .selected-card {
+    height: auto;
+    max-height: 85vh;
+    width: 100%;
+    margin: 5px;
+    overflow: auto;
+  }
+  .ant-list-item-meta-description {
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* background-color: green; */
+  }
+  .ant-list-split .ant-list-item {
+    border: 1px solid #f0f0f0;
+    margin: 5px;
+    padding: 5px;
+    
+  }
+    .ant-list-item-meta-title {
+        font-weight: 600;
+        color:rgb(97, 97, 97);
+        
+    }
