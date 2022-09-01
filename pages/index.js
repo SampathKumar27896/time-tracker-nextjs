@@ -54,14 +54,6 @@ const Task = ({ taskList, callBackendAPI }) => {
     } else {
       setListData(taskList);
       console.log(taskList.taskProgress);
-      if (taskList.taskProgress.length === 1) {
-        let currentProgress = taskList.taskProgress[0];
-        setCurrentProgressTask(currentProgress);
-        form.setFieldsValue({
-          timer: [moment(currentProgress.startTime), ""],
-        });
-        setTaskProgressState(currentProgress.taskProgressState);
-      }
     }
   }, [taskList, form, setTaskProgressState]);
   const handlePageChange = async (page) => {
@@ -75,7 +67,23 @@ const Task = ({ taskList, callBackendAPI }) => {
   };
   const handleSelectItem = (e, index) => {
     const list = listData.data.length > 0 ? listData : taskList;
-    console.log(list.data[index]);
+    if (
+      taskList.taskProgress.length === 1 &&
+      list.data[index]._id === taskList.taskProgress[0].taskId
+    ) {
+      let currentProgress = taskList.taskProgress[0];
+      setCurrentProgressTask(currentProgress);
+      form.setFieldsValue({
+        timer: [moment(currentProgress.startTime), ""],
+      });
+      setTaskProgressState(currentProgress.taskProgressState);
+    } else {
+      setCurrentProgressTask({});
+      setTaskProgressState(1);
+      form.setFieldsValue({
+        timer: ["", ""],
+      });
+    }
     setSelectedItem(list.data[index]);
   };
   const onFinish = async (values) => {
@@ -227,7 +235,7 @@ const Task = ({ taskList, callBackendAPI }) => {
           />
         </Col>
       </Row>
-      <Row className="row">
+      <Row className="row" style={{ height: "85vh", overflowX: "auto" }}>
         <Col className="split-view-left" span={8}>
           <List
             itemLayout="horizontal"

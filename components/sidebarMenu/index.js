@@ -10,7 +10,7 @@ const SidebarMenu = () => {
         <Link href="/project/">Project</Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <Link href="/login">Login</Link>
+        <Link href="/stats">Stats</Link>
       </Menu.Item>
     </Menu>
   );
