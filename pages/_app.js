@@ -49,15 +49,7 @@ const App = ({ Component, pageProps }) => {
     <Spin
       size="large"
       spinning={loading}
-      tip="Loading..."
-      indicator={
-        <Loading3QuartersOutlined
-          style={{
-            fontSize: 24,
-          }}
-          spin
-        />
-      }
+      indicator={<Loading3QuartersOutlined className="spinner" spin />}
     >
       {getLayout(<Component {...pageProps} callBackendAPI={callBackendAPI} />)}
     </Spin>

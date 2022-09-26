@@ -235,7 +235,7 @@ const Task = ({ taskList, callBackendAPI }) => {
           />
         </Col>
       </Row>
-      <Row className="row" style={{ height: "85vh", overflowX: "auto" }}>
+      <Row className="row">
         <Col className="split-view-left" span={8}>
           <List
             itemLayout="horizontal"
@@ -248,7 +248,10 @@ const Task = ({ taskList, callBackendAPI }) => {
               pageSize: listData.limit,
             }}
             renderItem={(item, index) => (
-              <List.Item onClick={(e) => handleSelectItem(e, index)}>
+              <List.Item
+                onClick={(e) => handleSelectItem(e, index)}
+                tabIndex="0"
+              >
                 <List.Item.Meta
                   title={item.name}
                   description={item.description}
@@ -275,7 +278,9 @@ const Task = ({ taskList, callBackendAPI }) => {
                   />,
                 ]}
               >
-                <p>{selectedItem.description}</p>
+                <p className="selected-card-description">
+                  {selectedItem.description}
+                </p>
               </Card>
               <Card
                 title="Daily Progress"
